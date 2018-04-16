@@ -1,0 +1,30 @@
+
+<configuration>
+
+<include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+<property name="LOGS_HOME" value="./logs/" />
+
+<appender name="CACHE_LOG" class="ch.qos.logback.core.FileAppender">
+    <file>${LOGS_HOME}/cache.log</file>
+    <encoder>
+        <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+</appender>
+
+
+<logger name="com.craft.AppCache" level="INFO">
+    <appender-ref ref="CACHE_LOG" />
+</logger>
+
+<appender name="APP_LOG" class="ch.qos.logback.core.FileAppender">
+    <file>${LOGS_HOME}/application.log</file>
+    <encoder>
+        <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+</appender>
+
+<logger name="com.craft" level="DEBUG">
+    <appender-ref ref="APP_LOG" />
+</logger>
+</configuration>
