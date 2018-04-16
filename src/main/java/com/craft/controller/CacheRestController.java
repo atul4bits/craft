@@ -18,10 +18,10 @@ public class CacheRestController {
     private final String CACHE_NOT_READY =  "Cache is being loaded, please wait for few seconds..";
 
     @Autowired
-    AppCache appCache;
+    private AppCache appCache;
 
     @Autowired
-    LoadXML loadXML;
+    private LoadXML loadXML;
 
     @RequestMapping(method = RequestMethod.GET, path = "/getEntity",produces = "application/json; charset=utf-8")
     //@Cacheable("entities") this can be used as well. If we use this, requests wont go to our own implemented cache

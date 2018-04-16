@@ -47,7 +47,7 @@ public class LoadXML {
         return isCacheLoading;
     }
 
-    public void setCacheLoading(Boolean cacheLoading) {
+    private void setCacheLoading(Boolean cacheLoading) {
         isCacheLoading = cacheLoading;
     }
 
