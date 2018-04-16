@@ -19,6 +19,7 @@ public class Tasks {
 
     @Scheduled(fixedRateString = "${cache.load.interval}",initialDelayString = "${cache.load.interval}" )
     //@CacheEvict(value="entities",  allEntries=true)
+    // this will evict the
     public void reLoadCache() {
         log.info("RE-LOADING the XML file to initialize the cache, time is:" + Calendar.getInstance().getTime());
         loadXML.loadXMLData();

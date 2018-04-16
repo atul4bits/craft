@@ -18,10 +18,11 @@ public class AppCache {
     }
 
     public Entity get(String k){
-        log.info("Logging request for Key: "+k);
+        log.info("Cache got request for Key: "+k);
         return _cache.getOrDefault(k, null);
     }
 
+    // cleans the existing cache and initializes new one
     public void initialize(){
         _cache = null;
         _cache = new ConcurrentHashMap<>();
