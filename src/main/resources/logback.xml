@@ -13,7 +13,7 @@
 </appender>
 
 
-<logger name="com.craft.AppCache" level="INFO">
+<logger name="com.craft.cache.AppCache" level="INFO">
     <appender-ref ref="CACHE_LOG" />
 </logger>
 

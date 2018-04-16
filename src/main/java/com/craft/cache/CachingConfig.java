@@ -1,4 +1,4 @@
-package com.craft;
+package com.craft.cache;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;

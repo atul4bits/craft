@@ -1,6 +1,6 @@
 package com.craft.schedule;
 
-import com.craft.AppCache;
+import com.craft.cache.AppCache;
 import com.craft.entity.EntityMaster;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

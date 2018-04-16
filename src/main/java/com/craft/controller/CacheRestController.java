@@ -1,7 +1,7 @@
 package com.craft.controller;
 
 
-import com.craft.AppCache;
+import com.craft.cache.AppCache;
 import com.craft.entity.Entity;
 import com.craft.schedule.LoadXML;
 import org.springframework.beans.factory.annotation.Autowired;

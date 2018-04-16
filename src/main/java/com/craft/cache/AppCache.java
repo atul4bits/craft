@@ -1,11 +1,10 @@
-package com.craft;
+package com.craft.cache;
 
 import com.craft.entity.Entity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import java.util.Calendar;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -19,7 +18,7 @@ public class AppCache {
     }
 
     public Entity get(String k){
-        log.info("Logging request for Key: "+k +" @ time: " + Calendar.getInstance().getTime());
+        log.info("Logging request for Key: "+k +" @ time: " );
         return _cache.getOrDefault(k, null);
     }
 
