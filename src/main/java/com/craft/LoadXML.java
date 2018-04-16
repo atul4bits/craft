@@ -32,6 +32,7 @@ public class LoadXML {
 
             setCacheLoading(Boolean.TRUE);
             appCache.initialize();
+            // todo limit the cache enteries to max cache size if file has more elements
             em.getEntities().stream().forEach(x-> appCache.add(x.getKey(),x));
 
         }catch (JAXBException jaxbe){

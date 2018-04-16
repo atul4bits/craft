@@ -90,15 +90,20 @@ public class CraftApplicationTests {
 	    assertThat(appCache.size()).isGreaterThanOrEqualTo(5);
         Entity obj =  (Entity) cacheRestController.addEntity("t7","val7");
 
+        String key = "t10";
+        String value = "val10";
         assertThat(obj).isNotNull();
-        cacheRestController.addEntity("t10","val10");
+        cacheRestController.addEntity(key,value);
         assertThat(appCache.size()).isEqualTo(7);
+        Entity e1 = appCache.get(key);
+
+        assertThat(e1.getValue()).isEqualTo(value);
     }
 
 
     /*
 
-    Mocked test cases
+    Few Mocked test cases
      */
 
     @InjectMocks
@@ -131,5 +136,8 @@ public class CraftApplicationTests {
         Entity obj = (Entity) cacheRestControllerInjected.getEntity(key);
         assertThat(obj.getValue()).isEqualTo("val4");
     }
+
+    // similarly can add mock tests for other classes like appCache, Tasks, LoadXML etc
+
 
 }
