@@ -7,12 +7,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
+
+import java.util.Calendar;
 import java.util.Date;
 
 @SpringBootApplication
 @EnableScheduling
+
+//this can be used as well as first level of cache
 //@EnableCaching
-// this can be used as well as first level of cache
 public class CraftApplication implements CommandLineRunner{
 	private static final Logger log = LoggerFactory.getLogger(CraftApplication.class);
 
@@ -25,7 +28,7 @@ public class CraftApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) {
-		log.info("LOADING the XML file to cache, time is:" + new Date());
+		log.info("LOADING the XML file to cache on start up");
 		loadXML.loadXMLData();
 	}
 }

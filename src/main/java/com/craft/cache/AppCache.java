@@ -18,7 +18,7 @@ public class AppCache {
     }
 
     public Entity get(String k){
-        log.info("Logging request for Key: "+k );
+        log.info("Logging request for Key: "+k);
         return _cache.getOrDefault(k, null);
     }
 
