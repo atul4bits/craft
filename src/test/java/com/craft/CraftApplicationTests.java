@@ -3,7 +3,6 @@ package com.craft;
 import com.craft.cache.AppCache;
 import com.craft.controller.CacheRestController;
 import com.craft.entity.Entity;
-import com.craft.schedule.LoadXML;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,7 +3,7 @@ package com.craft.controller;
 
 import com.craft.cache.AppCache;
 import com.craft.entity.Entity;
-import com.craft.schedule.LoadXML;
+import com.craft.LoadXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

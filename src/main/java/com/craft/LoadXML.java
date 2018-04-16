@@ -1,4 +1,4 @@
-package com.craft.schedule;
+package com.craft;
 
 import com.craft.cache.AppCache;
 import com.craft.entity.EntityMaster;
