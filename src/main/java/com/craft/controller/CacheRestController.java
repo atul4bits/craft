@@ -15,6 +15,8 @@ import java.util.Date;
 @RestController
 public class CacheRestController {
 
+    private final String CACHE_NOT_READY =  "Cache is being loaded, please wait for few seconds..";
+
     @Autowired
     AppCache appCache;
 
@@ -26,7 +28,7 @@ public class CacheRestController {
     // as this will be called before invoking this method
     public Object getEntity(@RequestParam(value="key") String key) {
         if(loadXML.isCacheLoading()){
-            return "Cache is being loaded, hit in few seconds";
+            return CACHE_NOT_READY;
         }
         Entity e = appCache.get(key);
         return  (e  == null) ? "Key: " + key + " doesn't exist": e ;
@@ -37,7 +39,7 @@ public class CacheRestController {
     @RequestMapping(method = RequestMethod.POST, path = "/addEntity" ,produces = "application/json; charset=utf-8")
     public Object addEntity(@RequestParam(value="key")  String key , @RequestParam(value="val") String val ) {
         if(loadXML.isCacheLoading()){
-            return "Cache is being loaded, hit in few seconds";
+            return CACHE_NOT_READY;
         }
         Entity entity = new Entity(key,val,new Date());
         appCache.add(key,entity);
